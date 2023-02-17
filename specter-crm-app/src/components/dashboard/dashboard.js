@@ -8,7 +8,7 @@ export default function Dashboard () {
         
         <>
         {/* <TopNav /> */}
-        <SideNav />
+        <SideNav pageName="Dashboard" user=""/>
         <div class="col ">
             <div class="container-fluid mw-3 p-3 glass vh-100 overflow-scroll ">
                 <div>

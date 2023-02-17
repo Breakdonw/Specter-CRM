@@ -1,10 +1,17 @@
+import SideNav from "../sideNav/sideNav";
 import topNav from "../topnav/topNav";
-import sideNav from "../sideNav/sideNav";
 
-function order (){
+
+export default function Orders (){
     return (
-        div
+        <>
+        <SideNav pageName="Orders" user="test"/>
+        <div class="col"> Place holder cause this shit SUCKS
+
+        </div>
+        </>
+
+        
     )
 }
 
-export default order;
