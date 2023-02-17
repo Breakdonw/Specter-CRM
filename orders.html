@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="">
+  <header>
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <div class="nav navbar-nav">
+                <a class="nav-item nav-link active" href="#" aria-current="page">Specter <span class="visually-hidden">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Home</a>
+                
+            </div>
+        </nav>
+  </header>
+  <main class="">
+    <div class="row background-image w-100 m-0">
+      <!-- Side bar -->
+    <nav class="col-md-2 d-none d-md-block h-100 vh-100 d-inline-block glass  sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column ">
+            <h6 class="sidebar-heading d-flex justify-content-center align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Welcome John Doe</span>
+            </h6>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                Dashboard <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                Orders
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Products
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                Contacts
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                Contracts
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                Administration
+              </a>
+            </li>
+          </ul>
+            <hr>
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Saved Views</span>
+            <a class="d-flex align-items-center text-muted" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                My Sales
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Local Product Inventor
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Social engagement
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Site Sales Data
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+        <!-- Main Content -->
+  
+        <div class="col ">
+          <div class="container-fluid mw-3 p-3 glass vh-100 overflow-scroll ">
+            <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title w-100 d-inline-flex ">Recently Created Orders <div class=" d-inline-flex w-100 justify-content-end"><button type="button" class=" btn btn-success"  data-bs-toggle="modal" data-bs-target="#createOrderModal">Create order</button></div></h4>
+                      <div class="table-responsive">
+                          <table class="table table-primary">
+                              <thead>
+                                  <tr>
+                                      <th scope="col">Column 1</th>
+                                      <th scope="col">Column 2</th>
+                                      <th scope="col">Column 3</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr class="">
+                                      <td scope="row">R1C1</td>
+                                      <td>R1C2</td>
+                                      <td>R1C3</td>
+                                  </tr>
+                                  <tr class="">
+                                      <td scope="row">Item</td>
+                                      <td>Item</td>
+                                      <td>Item</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              <hr>
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title d-inline-flex justify-content-center w-100">My Stats</h4>
+                    
+                  <div class="row ">
+                        <div class="card col m-1">
+                          <div class="card-body">
+                            <h4 class="card-title">Contact Methods</h4>
+                            <hr>  
+                            <div class="container-fluid">
+                              <canvas id="contactMethodsRadarChart"></canvas>
+                              </canvas>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card col m-1">
+                          <div class="card-body"> 
+                            <h4 class="card-title">Company Revenue Projections</h4>
+                            <p class="card-text"> Stacked Bar / line</p>
+                          </div>
+                        </div>
+
+                    </div>
+                  
+
+                    <div class="row ">
+                      <div class="card col m-1">
+                        <div class="card-body">
+                          <h4 class="card-title">Monthly Generated Revenue</h4>
+                          <p class="card-text">Stacked Bar/Line</p>
+                        </div>
+                      </div>
+                      <div class="card col m-1">
+                        <div class="card-body">
+                          <h4 class="card-title">% of unfufilled orders</h4>
+                          <p class="card-text">Text</p>
+                        </div>
+                      </div>
+                      <div class="card col m-1">
+                        <div class="card-body">
+                          <h4 class="card-title">Avg Respone Time</h4>
+                          <p class="card-text">Text</p>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="row ">
+                    <div class="card col m-1">
+                      <div class="card-body">
+                        <h4 class="card-title">Revenue by Item Category</h4>
+                        <p class="card-text">Radar</p>
+                      </div>
+                    </div>
+                    <div class="card col m-1">
+                      <div class="card-body">
+                        <h4 class="card-title">Deals Closed</h4>
+                        <p class="card-text">Bar Graph w/ Projections</p>
+                      </div>
+                    </div>
+
+                </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      
+      
+    </div>
+  
+
+  </main>
+
+  
+  <!-- MODALS -->
+  
+  <!-- Create ORDER MODAL -->
+  <div class="modal  fade" id="createOrderModal" tabindex="-1" aria-labelledby="createOrderLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg ">
+      <div class="modal-content glass ">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="createOrderModalLabel">Create Order</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row g-3">
+              <div class="col form-floating">
+                <input class=" form-control" type="text" id="OrderID"  placeholder="Will Populate on creation" disabled>
+                <label for="OrderID" class="col-sm-2 py-3 col-form-label"> Order Id (Will Populate On creation) </label>
+              </div>
+  
+              <div class="col form-floating ">
+                <input class="form-control" list="Users" id="orderCreationUsers" placeholder="Type to search Customers...">
+                <datalist id="orderCreationUsers">
+                  <option value="San Francisco">
+                  <option value="New York">
+                  <option value="Seattle">
+                  <option value="Los Angeles">
+                  <option value="Chicago">
+                </datalist>
+                <label for="exampleDataList" class="col-sm-2 p-3 col-form-label"> Type to search Customers...</label>
+            <br>
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col form-floating ">
+                <input class="form-control" list="Users" id="orderCreationUsers" placeholder="Type to search Customers...">
+                <datalist id="orderCreationUsers">
+                  <option value="San Francisco">
+                    <option value="New York">
+                      <option value="Seattle">
+                        <option value="Los Angeles">
+                          <option value="Chicago">
+                          </datalist>
+                          <label for="exampleDataList" class="col-sm-2 p-3 col-form-label"> Type to search Customers...</label>
+                        </div>
+                        
+                        <div class="col form-floating ">
+                          <input class="form-control" list="Users" id="orderCreationUsers" placeholder="Type to search Customers..." disabled>
+                <datalist id="orderCreationUsers">
+                  <option value="San Francisco">
+                    <option value="New York">
+                      <option value="Seattle">
+                        <option value="Los Angeles">
+                          <option value="Chicago">
+                          </datalist>
+                          <label for="exampleDataList" class="col-sm-2 p-3 col-form-label"> Type to search Sites...</label>
+                        </div>
+                        
+                        <div class="col form-floating">
+                          <select class="form-select" id="orderQtySelct" aria-label="Default select example" Disabled>
+                  <option selected value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <label for="orderQtySelct" class="col-sm-2 py-3 col-form-label"> Quantity of Items </label>
+              </div>
+              <button class="btn btn-primary form-control" id="orderAddItemBtn" type="button">Add Item</button>
+              
+              
+            </div>
+            <hr>
+            <div class="table-responsive">
+              <table class="table table-white table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Iteam Name</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Warehouse</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="">
+                    <td scope="row">R1C1</td>
+                    <td>R1C2</td>
+                    <td>R1C3</td>
+                  </tr>
+                  <tr class="">
+                    <td scope="row">Item</td>
+                    <td>Item</td>
+                    <td>Item</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card glass">
+              <div class="card-body">
+                <h4 class="card-title">Total</h4>
+                <p class="card-text">Item Subtotal: <b>$ 123.45</b></p>
+                <p class="card-text">Discount: <b>$ 123.45</b></p>
+                <p class="card-text">State Tax: <b>$ 123.45</b></p>
+                <h1>Total: <i>$ 123.45</i></h1>
+  
+              </div>
+            </div>
+  
+  
+            <div class="modal-footer mt-2">
+              <button type="button" type="submit" class="mx-1 btn btn-success">Save changes</button>
+              <button type="button" class="mx-1 btn btn-danger">Delete Order</button>
+              <button type="button" class="mx-1  btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+  integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script type="module" src="./graph.js"></script>
+
+</body>
+
+</html>

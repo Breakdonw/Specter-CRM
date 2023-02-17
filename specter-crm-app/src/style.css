@@ -1,0 +1,25 @@
+body  {
+    overflow: hidden;
+}
+ 
+.background-image{
+    backdrop-filter: grayscale(1);
+    background-image: url("https://assets3.thrillist.com/v1/image/3122249/2880x1620/crop;webp=auto;jpeg_quality=60;progressive.jpg");
+  
+}
+
+
+.glass{ 
+    backdrop-filter: none;
+    backdrop-filter: blur(25px);
+    background-color: rgba(210, 210, 210, 0.6);
+}
+
+
+.mt-10{
+    margin-top: 10rem;
+}
+
+.mt-15{
+    margin-top: 15rem;
+}
