@@ -13,7 +13,7 @@ export default function Dashboard () {
             <div class="container-fluid mw-3 p-3 glass vh-100 overflow-scroll ">
                 <div>
                     <div class="card w-100 h-100 p-5">
-                        <canvas id="myChart"></canvas>
+                        <canvas id="contactMethodsRadarChart"></canvas>
 
                     </div>
                 </div>
