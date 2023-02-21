@@ -17,7 +17,7 @@ export default function Dashboard () {
 
                     </div>
                 </div>
-                {/* <hr> */}
+                <hr />
                 <div class=" row  ">
 
                     <div class="col">
