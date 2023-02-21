@@ -210,7 +210,7 @@ export default function Orders (){
   
   
             <div class="modal-footer mt-2">
-              <button type="button" type="submit" class="mx-1 btn btn-success">Save changes</button>
+              <button type="button"  class="mx-1 btn btn-success">Save changes</button>
               <button type="button" class="mx-1 btn btn-danger">Delete Order</button>
               <button type="button" class="mx-1  btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
             </div>
