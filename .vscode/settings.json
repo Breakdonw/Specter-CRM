@@ -1,4 +1,11 @@
 {
-    "sqltools.connections": [],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Specter DB",
+            "database": "${workspaceFolder:SpecterCRM}/db.sqlite"
+        }
+    ],
     "sqltools.useNodeRuntime": true
 }
