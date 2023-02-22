@@ -1,0 +1,12 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Specter-CRm",
+            "group": "Specter",
+            "database": "${workspaceFolder:Specter}/db.sql"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
