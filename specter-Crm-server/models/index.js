@@ -25,10 +25,15 @@ db.buisnessesAdresses = require("../models/buisnessAddressesModel.js"),(sequeliz
 db.product = require("../models/productModel.js"),(sequelize,Sequelize);
 db.productInventory = require("../models/productInventoryModel.js"),(sequelize,Sequelize);
 db.contact = require("../models/contactModel.js"),(sequelize,Sequelize);
+db.sale = require("../models/saleModel.js"),(sequelize,Sequelize);
+db.saleItems = require("../models/saleItemModel.js"),(sequelize,Sequelize);
 
 
-
-
+/* This is creating a one-to-many relationship between the sale and product tables. */
+db.sale.hasMany(db.product,{
+  as:"Items", 
+  through:"sale_items"
+});
 /* This is creating a many-to-many relationship between the role and contact tables. */
 db.role.belongsToMany(db.contact, {
   through: "contact_roles",
