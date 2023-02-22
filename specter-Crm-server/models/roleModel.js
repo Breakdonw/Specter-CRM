@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         unique: true
       },
+      type: {
+        type: DataTypes.ENUM,
+        values: ['role','buisnessrole']
+      },
       description: {
         type: DataTypes.STRING
       },

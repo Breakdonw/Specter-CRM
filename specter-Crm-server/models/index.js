@@ -1,24 +1,14 @@
-const config = require("../config/db.config.js");
-
 /* This is creating a new instance of Sequelize and connecting to the database. */
-const Sequelize = require("sequelize");
-const sequelize = new Sequelize(
-  config.DB,
-  config.USER,
-  config.PASSWORD,
-  {
-    host: config.HOST,
-    dialect: config.dialect,
-    operatorsAliases: false,
+const {Sequelize }= require("sequelize");
 
-    pool: {
-      max: config.pool.max,
-      min: config.pool.min,
-      acquire: config.pool.acquire,
-      idle: config.pool.idle
-    }
+const sequelize = new Sequelize(
+
+  {
+    dialect: 'sqlite',
+    storage: '../db.sqlite'
   }
 );
+
 
 const db = {};
 

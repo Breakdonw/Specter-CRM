@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING
 
       },
+      state: {
+        type: DataTypes.ENUM,
+        values: ['banned','active','inactive', 'locked']
+      },
       firstName: {
         type: DataTypes.STRING
       },
@@ -24,6 +28,9 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING
       },
       creationDate: {
+        type: DataTypes.DATE
+      },
+      lastLoginDate: {
         type: DataTypes.DATE
       },
     });
