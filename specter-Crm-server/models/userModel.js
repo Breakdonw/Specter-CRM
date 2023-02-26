@@ -30,12 +30,12 @@ module.exports = (sequelize, DataTypes) => {
       creationDate: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: Sequelize.NOW
+        defaultValue: DataTypes.NOW
       },
       lastLoginDate: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: Sequelize.NOW
+        defaultValue: DataTypes.NOW
       },
     });
   
