@@ -28,24 +28,36 @@ db.sequelize.sync({force: true}).then(() => {
 
 function initial() {
   Role.create({
-    id: 1,
-    name: "user"
+    name: "user",
+    roleType: "Role",
+    description:"This is the Default User Role and grants Default Permissions "
   });
  
   Role.create({
-    id: 2,
-    name: "moderator"
+    name: "moderator",
+    roleType: "Role",
+    description:"This is the Default Moderator Role and grants permissions to user control and logging  "
+
   });
  
   Role.create({
-    id: 3,
-    name: "admin"
+    name: "admin",
+    roleType: "Role",
+    description:"This is the Default User Role and grants Default Permissions "
   });
 }
 // simple route
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to Specter application." });
 });
+
+
+
+
+
+
+
+
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

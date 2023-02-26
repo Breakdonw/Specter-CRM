@@ -3,8 +3,8 @@
         {
             "previewLimit": 50,
             "driver": "SQLite",
-            "name": "Specter DB",
-            "database": "${workspaceFolder:SpecterCRM}/db.sqlite"
+            "database": "${workspaceFolder:Specter}/db.sqlite",
+            "name": "Specter"
         }
     ],
     "sqltools.useNodeRuntime": true
