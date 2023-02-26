@@ -20,6 +20,36 @@ async function LoginUser(credentials) {
     }
 
 
+/**
+ * It takes the email and password from the form, and sends it to the backend to be validated. If the
+ * validation is successful, it returns a token.
+ * </code>
+ * 
+ * 
+ * A:
+ * 
+ * You can use <code>useEffect</code> hook to check if the token is set and redirect to the dashboard.
+ * <code>import { useEffect } from 'react';
+ * 
+ * export default function Login({setToken}) {
+ *   const [email, setEmail] = useState();
+ *   const [password, setPassword] = useState()
+ * 
+ *   useEffect(() =&gt; {
+ *     if (token) {
+ *       // redirect to dashboard
+ *     }
+ *   }, [token]);
+ * 
+ *   const handleSubmit = async (e) =&gt; {
+ *     e.preventDefault()
+ *     const token = await LoginUser({
+ *       email,
+ *       password
+ *     })
+ *     setToken(token)
+ * @returns A functional component that renders a login form.
+ */
 export default function Login({setToken}) {
 
 /* A hook that allows you to use state in a functional component. */
@@ -43,34 +73,37 @@ export default function Login({setToken}) {
 
 
   return(
-<div class=" container h-100 col-auto align-self-center  " style="margin-top:15rem">
-    <div class="card bg-transparent flex-row ">
-            <div class="col-6 glass align-items-center d-flex justify-content-center "> <h4>Specter CRM</h4></div>
+
+<div className=" background-image vw-100 vh-100 pt-10 ">
+<div className="  h-100 col-auto align-self-center">
+    <div className="card bg-transparent flex-row ">
+            <div className="col-6 glass align-items-center d-flex justify-content-center "> <h4>Specter CRM</h4></div>
 
 
-            <div class="col bg-white">  
-                <form class="p-5" onSubmit={handleSubmit}>
-                    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <div className="col bg-white">  
+                <form className="p-5" onSubmit={handleSubmit}>
+                    <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
                 
-                    <div class="form-floating">
-                      <input type="email" class="form-control" required onChange={(e)=>setEmail(e.target.value)} placeholder="name@example.com" />
-                      <label for="floatingInput">Email address</label>
+                    <div className="form-floating">
+                      <input type="email" className="form-control" required onChange={(e)=>setEmail(e.target.value)} placeholder="name@example.com" />
+                      {/* <label for="floatingInput">Email address</label> */}
                     </div>
-                    <div class="form-floating">
-                      <input type="password" class="form-control" required onChange={(e)=>setPassword(e.target.value)} placeholder="Password" />
-                      <label for="floatingPassword">Password</label>
+                    <div className="form-floating">
+                      <input type="password" className="form-control" required onChange={(e)=>setPassword(e.target.value)} placeholder="Password" />
+                      {/* <label for="floatingPassword">Password</label> */}
                     </div>
                 
-                    <div class="checkbox mb-3">
+                    <div className="checkbox mb-3">
                       <label>
                         <input type="checkbox" value="remember-me" /> Remember me
                       </label>
                     </div>
-                    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-                    <p class="mt-5 mb-3 text-muted">© 2017–2022</p>
+                    <button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                    <p className="mt-5 mb-3 text-muted">© 2017–2022</p>
                   </form>
             </div>
     </div>
+</div>
 </div>
 
 )
