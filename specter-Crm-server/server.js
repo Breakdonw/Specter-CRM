@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "http://localhost:3000"
 };
 
 app.use(cors(corsOptions));
@@ -52,7 +52,8 @@ app.get("/", (req, res) => {
 });
 
 
-
+require('./routes/auth.routes')(app);
+require('./routes/user.routes')(app);
 
 
 
