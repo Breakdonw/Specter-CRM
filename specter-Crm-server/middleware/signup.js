@@ -19,7 +19,7 @@ checkDuplicateEmails = (req, res, next) => {
 };
 
 const verifySignUp = {
-    checkDuplicateEmail : checkDuplicateEmails
+    checkDuplicateEmails : checkDuplicateEmails
   };
   
 module.exports = verifySignUp;
