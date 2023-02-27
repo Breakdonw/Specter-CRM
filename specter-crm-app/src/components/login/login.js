@@ -28,6 +28,7 @@ export default function Login({setToken}) {
 /* A hook that allows you to use state in a functional component. */
       const [email, setEmail] = useState();
       const [password, setPassword] = useState()
+      const [loginErrorMessage, setloginErrorMessage] = useState();
 
 
 /**
@@ -41,8 +42,13 @@ export default function Login({setToken}) {
                email,
                password
           })
-          setToken(token)
-          console.log(token)
+          if(token.accessToken != null){
+            setToken(token);
+            console.log(token);
+            setloginErrorMessage();
+          } else {
+            setloginErrorMessage(token.message)
+          }
       }
 
 
@@ -57,9 +63,9 @@ export default function Login({setToken}) {
             <div className="col bg-white">  
                 <form className="p-5" onSubmit={handleSubmit}>
                     <h1 className="h3 mb-3 fw-normal ">Please sign in</h1>
-                
+                      {loginErrorMessage && <span>Error {loginErrorMessage} </span>}
                     <div className="form-floating my-1">
-                      <input type="email" className="form-control" required onChange={(e)=>setEmail(e.target.value)} placeholder="name@example.com" />
+                      <input type="email" className="form-control is-va" required onChange={(e)=>setEmail(e.target.value)} placeholder="name@example.com" />
                       <label htmlFor="floatingInput">Email address</label>
                     </div>
                     <div className="form-floating my-1">
