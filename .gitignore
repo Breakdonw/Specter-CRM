@@ -105,4 +105,4 @@ dist
 
 
 #SqlLite Db
-.sqllite
+db.sqllite
