@@ -13,6 +13,7 @@ body  {
     backdrop-filter: none;
     backdrop-filter: blur(25px);
     background-color: rgba(210, 210, 210, 0.6);
+    box-shadow: inset 0 0 5rem #e7e4e4;
 }
 
 

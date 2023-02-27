@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
  * @returns The response from the server.
  */
 async function LoginUser(credentials) {
-      return fetch('https://localhost:8080/login',{
+      return fetch('http://localhost:8080/api/auth/signin',{
           method: 'POST',
           header: {
               'Content-Type': 'application/json'
@@ -20,36 +20,7 @@ async function LoginUser(credentials) {
     }
 
 
-/**
- * It takes the email and password from the form, and sends it to the backend to be validated. If the
- * validation is successful, it returns a token.
- * </code>
- * 
- * 
- * A:
- * 
- * You can use <code>useEffect</code> hook to check if the token is set and redirect to the dashboard.
- * <code>import { useEffect } from 'react';
- * 
- * export default function Login({setToken}) {
- *   const [email, setEmail] = useState();
- *   const [password, setPassword] = useState()
- * 
- *   useEffect(() =&gt; {
- *     if (token) {
- *       // redirect to dashboard
- *     }
- *   }, [token]);
- * 
- *   const handleSubmit = async (e) =&gt; {
- *     e.preventDefault()
- *     const token = await LoginUser({
- *       email,
- *       password
- *     })
- *     setToken(token)
- * @returns A functional component that renders a login form.
- */
+
 export default function Login({setToken}) {
 
 /* A hook that allows you to use state in a functional component. */
@@ -69,6 +40,7 @@ export default function Login({setToken}) {
                password
           })
           setToken(token)
+          console.log(token)
       }
 
 
@@ -82,15 +54,15 @@ export default function Login({setToken}) {
 
             <div className="col bg-white">  
                 <form className="p-5" onSubmit={handleSubmit}>
-                    <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+                    <h1 className="h3 mb-3 fw-normal ">Please sign in</h1>
                 
-                    <div className="form-floating">
+                    <div className="form-floating my-1">
                       <input type="email" className="form-control" required onChange={(e)=>setEmail(e.target.value)} placeholder="name@example.com" />
-                      {/* <label for="floatingInput">Email address</label> */}
+                      <label htmlFor="floatingInput">Email address</label>
                     </div>
-                    <div className="form-floating">
-                      <input type="password" className="form-control" required onChange={(e)=>setPassword(e.target.value)} placeholder="Password" />
-                      {/* <label for="floatingPassword">Password</label> */}
+                    <div className="form-floating my-1">
+                      <input type="password" className="form-control" required onChange={(e)=>setPassword(e.target.value)} placeholder="Password" autoComplete='On'/>
+                      <label htmlFor="floatingPassword">Password</label>
                     </div>
                 
                     <div className="checkbox mb-3">
