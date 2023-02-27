@@ -31,12 +31,12 @@ exports.signup = (req, res) => {
   exports.signin = (req, res) => {
     User.findOne({
       where: {
-        username: req.body.username
+        email: req.body.email
       }
     })
       .then(user => {
         if (!user) {
-          return res.status(404).send({ message: "Invalid Login" });
+          return res.status(404).send({ message: "Invalid EMAIL" });
         }
   
         var passwordIsValid = bcrypt.compareSync(
@@ -47,7 +47,7 @@ exports.signup = (req, res) => {
         if (!passwordIsValid) {
           return res.status(401).send({
             accessToken: null,
-            message: "Invalid Login"
+            message: "Invalid PASS"
           });
         }
   
@@ -70,6 +70,6 @@ exports.signup = (req, res) => {
         });
       })
       .catch(err => {
-        res.status(500).send({ message: err.message });
+        res.status(500).send({ message: err.message + " ERR"});
       });
   };
