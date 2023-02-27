@@ -28,7 +28,7 @@ exports.signup = (req, res) => {
       });
   };
 
-  exports.signin = (req, res) => {
+  exports.signin = async (req, res) => {
     User.findOne({
       where: {
         email: req.body.email
@@ -70,6 +70,6 @@ exports.signup = (req, res) => {
         });
       })
       .catch(err => {
-        res.status(500).send({ message: err.message + " ERR"});
+        res.status(500).send({ message: err.message + " email Obj : " + JSON.stringify(req.body)});
       });
   };
