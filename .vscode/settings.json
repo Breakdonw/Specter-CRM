@@ -3,9 +3,12 @@
         {
             "previewLimit": 50,
             "driver": "SQLite",
-            "database": "${workspaceFolder:Specter}/db.sqlite",
+            "database": "${workspaceFolder:Technical Documentation}/db.sqlite",
             "name": "Specter"
         }
     ],
-    "sqltools.useNodeRuntime": true
+    "sqltools.useNodeRuntime": true,
+    "docwriter.progress.trackFunctions": true,
+    "docwriter.progress.trackClasses": true,
+    "docwriter.progress.trackTypes": true
 }
