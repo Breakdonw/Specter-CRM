@@ -4,9 +4,17 @@ import Login from "./components/login/login";
 import Dashboard from "./components/dashboard/dashboard";
 import Orders from "./components/orders/orders";
 
+function getToken () {
+  if (localStorage.getItem('token') !== null)
+  {
+    return localStorage.getItem('token');
+  } else {
+    return null;
+  }
+}
 
 function App() {
-  const [token,setToken] = useState();
+  const [token,setToken] = useState(getToken);
   if(!token){
     return < Login setToken={setToken} />
   }

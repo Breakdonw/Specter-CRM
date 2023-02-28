@@ -9,18 +9,40 @@ var bcrypt = require("bcryptjs");
 
 exports.signup = (req, res) => {
     // Save User to Database
+    var authorities = [];
+
     User.create({
-      username: req.body.username,
       email: req.body.email,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       password: bcrypt.hashSync(req.body.password, 8),
-      state: "inactive",
+      state: "Active",
 
     })
       .then(user => {
+        var token = jwt.sign({ id: user.id }, config.secret, {
+          expiresIn: 43200 // 12 hours
+        });
+  
           user.setRoles([1]).then(() => {
-            res.send({ message: "User was registered successfully!" });
+
+            user.getRoles().then(roles => {
+              for (let i = 0; i < roles.length; i++) {
+                authorities.push("ROLE_" + roles[i].name.toUpperCase());
+              }
+              res.status(200).send({
+                id: user.id,
+                username: user.username,
+                email: user.email,
+                roles: authorities,
+                accessToken: token
+              });
+            });
+          
+
+
+
+
           });
       })
       .catch(err => {
