@@ -9,23 +9,23 @@ export default function Dashboard () {
         <>
         {/* <TopNav /> */}
         <SideNav pageName="Dashboard" user=""/>
-        <div class="col ">
-            <div class="container-fluid mw-3 p-3 glass vh-100 overflow-scroll ">
+        <div className="col ">
+            <div className="container-fluid mw-3 p-3 glass vh-100 overflow-scroll ">
                 <div>
-                    <div class="card w-100 h-100 p-5">
+                    <div className="card w-100 h-100 p-5">
                         <canvas id="contactMethodsRadarChart"></canvas>
 
                     </div>
                 </div>
                 <hr />
-                <div class=" row  ">
+                <div className=" row  ">
 
-                    <div class="col">
-                        <div class="card mb-5">
-                            <div class="card-body">
-                                <h4 class="card-title">Top Sales</h4>
-                                <div class="table-responsive">
-                                    <table class="table table-light">
+                    <div className="col">
+                        <div className="card mb-5">
+                            <div className="card-body">
+                                <h4 className="card-title">Top Sales</h4>
+                                <div className="table-responsive">
+                                    <table className="table table-light">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Employee Name</th>
@@ -34,12 +34,12 @@ export default function Dashboard () {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="">
+                                            <tr className="">
                                                 <td scope="row">R1C1</td>
                                                 <td>R1C2</td>
                                                 <td>R1C3</td>
                                             </tr>
-                                            <tr class="">
+                                            <tr className="">
                                                 <td scope="row">Item</td>
                                                 <td>Item</td>
                                                 <td>Item</td>
@@ -52,14 +52,14 @@ export default function Dashboard () {
                         </div>
                     </div>
 
-                    <div class="col">
-                        <div class="card mb-5">
-                            <div class="card-body">
-                                <h4 class="card-title">Recent Sales</h4>
+                    <div className="col">
+                        <div className="card mb-5">
+                            <div className="card-body">
+                                <h4 className="card-title">Recent Sales</h4>
 
 
-                                <div class="table-responsive">
-                                    <table class="table  table-light">
+                                <div className="table-responsive">
+                                    <table className="table  table-light">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Employee Name</th>
@@ -68,12 +68,12 @@ export default function Dashboard () {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="">
+                                            <tr className="">
                                                 <td scope="row">R1C1</td>
                                                 <td>R1C2</td>
                                                 <td>R1C3</td>
                                             </tr>
-                                            <tr class="">
+                                            <tr className="">
                                                 <td scope="row">Item</td>
                                                 <td>Item</td>
                                                 <td>Item</td>

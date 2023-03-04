@@ -19,8 +19,8 @@ function App() {
     return < Login setToken={setToken} />
   }
   return (
-    <main class="">
-    <div class="row background-image w-100 m-0">
+    <main className="">
+    <div className="row background-image w-100 m-0">
       <Routes>
         <Route path="/" element={< Dashboard />}/>
         <Route path="/Orders" element={< Orders />}/>
