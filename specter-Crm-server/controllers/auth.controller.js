@@ -34,6 +34,8 @@ exports.signup = (req, res) => {
                 id: user.id,
                 username: user.username,
                 email: user.email,
+                firstName: user.firstName,
+                lastName: user.lastName,
                 roles: authorities,
                 accessToken: token
               });
@@ -86,6 +88,8 @@ exports.signup = (req, res) => {
             id: user.id,
             username: user.username,
             email: user.email,
+            firstName: user.firstName,
+            lastName: user.lastName,
             roles: authorities,
             accessToken: token
           });
