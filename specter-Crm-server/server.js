@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-
+const bcrypt = require("bcryptjs")
 const app = express();
 
 var corsOptions = {
@@ -27,6 +27,7 @@ db.sequelize.sync({force: true}).then(() => {
 
 
 function initial() {
+
   Role.create({
     name: "user",
     roleType: "Role",
@@ -45,6 +46,14 @@ function initial() {
     roleType: "Role",
     description:"This is the Default User Role and grants Default Permissions "
   });
+
+  db.user.create({
+    email: "super@user.com",
+    password: bcrypt.hashSync("superUser", 8),
+    firstName: "Super",
+    lastName: "user (Test Account )",
+    state: "Active"
+  })
 }
 // simple route
 app.get("/", (req, res) => {

@@ -32,8 +32,6 @@ exports.signup = (req, res) => {
               }
               res.status(200).send({
                 id: user.id,
-                username: user.username,
-                email: user.email,
                 firstName: user.firstName,
                 lastName: user.lastName,
                 roles: authorities,
@@ -86,8 +84,6 @@ exports.signup = (req, res) => {
           }
           res.status(200).send({
             id: user.id,
-            username: user.username,
-            email: user.email,
             firstName: user.firstName,
             lastName: user.lastName,
             roles: authorities,
