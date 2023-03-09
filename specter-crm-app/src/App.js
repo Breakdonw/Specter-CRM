@@ -7,7 +7,7 @@ import Orders from "./components/orders/orders";
 function getToken () {
   if (localStorage.getItem('token') !== null)
   {
-    return localStorage.getItem('token');
+    return JSON.parse(sessionStorage.getItem('token')) ;
   } else {
     return null;
   }

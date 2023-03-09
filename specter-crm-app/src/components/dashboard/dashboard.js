@@ -1,14 +1,45 @@
 import TopNav from "../topnav/topNav";
 import SideNav from "../sideNav/sideNav";
-import { Fragment } from "react";
+import { Fragment,useEffect } from "react";
+
+async function verifyToken(Token) {
+return fetch('http://localhost:8080/api/access/user',{
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+              'x-access-token': Token.accessToken
+          },
+          body: JSON.parse(sessionStorage.getItem('token'))
+      }).then(Response);
+ 
+ 
+}
+
 
 export default function Dashboard () {
 
+const checkAccess = async (e) =>{
+    if (verifyToken(JSON.parse(sessionStorage.getItem('token'))) != 200 ){
+
+        sessionStorage.removeItem('token');
+        console.log("Session Token Invalid, Please relogin");
+    } else {
+        console.log("Session Token Verified succesfully");
+    }
+
+
+}
+
+useEffect(() => {
+    checkAccess();
+  }, []
+  )
+
     return (
         
-        <>
+        < >
         {/* <TopNav /> */}
-        <SideNav pageName="Dashboard" user=""/>
+        <SideNav pageName="Dashboard" />
         <div className="col ">
             <div className="container-fluid mw-3 p-3 glass vh-100 overflow-scroll ">
                 <div>

@@ -36,7 +36,6 @@ async function LoginUser(credentials) {
     }
 
 
-
 export default function Login({setToken}) {
 
 /* A hook that allows you to use state in a functional component. */
@@ -80,7 +79,7 @@ const switchFormType = async (e) => {
                   })
                   if(token.accessToken != null){
                     setToken(token);
-                    localStorage.setItem('token',JSON.stringify(token))
+                    sessionStorage.setItem('token',JSON.stringify(token))
                     console.log(token);
                     setloginErrorMessage();
                   } else {
@@ -95,7 +94,7 @@ const switchFormType = async (e) => {
               lastName,
               password,
                   }) 
-                    localStorage.setItem('token',JSON.stringify(token))
+                    sessionStorage.setItem('token',JSON.stringify(token))
           } else {
             token.message = "Passwords do not Match"
           }

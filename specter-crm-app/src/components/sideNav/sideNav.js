@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+ 
 
 export default function SideNav(props){
-  const token = localStorage.getItem('token')
+  const token = JSON.parse(sessionStorage.getItem('token'))
   const pageName = props.pageName;
-  const userFullName = props.user.fName + " " + props.user.lName
+  var userFullName = token.firstName + ' ' + token.lastName;
     return (
         <nav className="col-md-2 d-none d-md-block h-100 vh-100 d-inline-block glass  sidebar">
         <div className="sidebar-sticky">
